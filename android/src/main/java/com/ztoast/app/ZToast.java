@@ -9,6 +9,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.PluginMethod;
 
+@CapacitorPlugin(name = "ZToast")
 public class ZToast extends Plugin {
     @PluginMethod
     public void show(PluginCall call) {
