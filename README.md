@@ -1,37 +1,24 @@
 # ztoast
 
-This is a capicitor native toaster for mobail
+A Capacitor native Toast plugin for mobile apps (Android & iOS).  
+Easily show native toasts from your Ionic Vue / Capacitor app.
 
-## Install
+## Installation
 
 ```bash
-npm install ztoast
+npm install zakirjarir/ztoast
 npx cap sync
-```
 
-## API
 
-<docgen-index>
+<script setup lang="ts">
+import { onMounted } from 'vue';
+import { ZToast } from 'ztoast';
 
-* [`echo(...)`](#echo)
-
-</docgen-index>
-
-<docgen-api>
-<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
-
-### echo(...)
-
-```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
-```
-
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
-
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
-
---------------------
-
-</docgen-api>
+onMounted(async () => {
+  // Show a simple toast
+  await ZToast.show({ 
+    message: 'Hello Jarir!', 
+    duration: 2000 // milliseconds
+  });
+});
+</script>
